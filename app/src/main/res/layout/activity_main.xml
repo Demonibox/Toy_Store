@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,4 +15,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="398dp"
+        android:layout_height="515dp"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+</RelativeLayout>
