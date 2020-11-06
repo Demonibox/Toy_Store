@@ -16,10 +16,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:id="@+id/TOY_STORE"
+        android:layout_width="385dp"
+        android:layout_height="408dp"
+        android:text="BISTLORD"
+        android:textSize="36sp"
         tools:layout_editor_absoluteX="194dp"
         tools:layout_editor_absoluteY="139dp" />
 
@@ -30,11 +31,5 @@
         android:text="Switch"
         tools:layout_editor_absoluteX="123dp"
         tools:layout_editor_absoluteY="246dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 </RelativeLayout>
