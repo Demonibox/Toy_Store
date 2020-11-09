@@ -1,7 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/enter_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Введите ваше имя" />
+
+    <ImageView
+        android:id="@+id/Toy_store"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:paddingTop="60dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/toy_store" />
+
+    <Button
+        android:id="@+id/Subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:onClick="setSubscribe"
+        android:text="Подпишись на наши новости!" />
+
+    <TextView
+        android:id="@+id/select_product"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Выберите товар" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="127dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/stich" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/priceTitleTextView"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="цена" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/RubTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_toRightOf="@+id/priceTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="Р" />
+
+        <TextView
+            android:id="@+id/QuantitytextView"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="195dp"
+            android:layout_marginLeft="182dp"
+            android:layout_toRightOf="@id/priceTitleTextView"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Кол-во" />
+
+        <Button
+            android:id="@+id/minusbutton"
+            android:onClick="decreaseQuantity"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/QuantitytextView"
+            android:layout_marginStart="240dp"
+            android:layout_marginLeft="236dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/white"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/QuantitypriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/minusbutton"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/plusbutton"
+            android:onClick="increaseQuantity"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/QuantitytextView"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/QuantitypriceTextView"
+            android:text="+"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/AddtoCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AddtoCartButton"
+        android:text="Добавить в корзину"  />
+</LinearLayout>
