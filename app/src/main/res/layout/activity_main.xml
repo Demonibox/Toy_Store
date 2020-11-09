@@ -139,4 +139,10 @@
         android:layout_height="wrap_content"
         android:onClick="AddtoCartButton"
         android:text="Добавить в корзину"  />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 </LinearLayout>
