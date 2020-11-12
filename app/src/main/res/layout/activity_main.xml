@@ -137,7 +137,7 @@
         android:id="@+id/AddtoCart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="AddtoCartButton"
+        android:onClick="AddtoCart"
         android:text="Добавить в корзину"  />
 
 </LinearLayout>

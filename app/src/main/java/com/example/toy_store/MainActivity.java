@@ -2,11 +2,14 @@ package com.example.toy_store;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,11 +27,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     HashMap goodsMap;
     String goodsName;
     double price;
+    EditText userNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        userNameEditText = findViewById(R.id.enter_name);
 
         spinner = findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
@@ -99,8 +105,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
 
-    public void AddtoCartButton(View view) {
-        Button AddtoCartButton = findViewById(R.id.AddtoCart);
-        AddtoCartButton.setText("Товар добавлен!");
+    public void AddtoCart(View view) {
+
+        Order order = new Order();
+        order.userName = userNameEditText.getText().toString();
+
+
+        order.goodsName = goodsName;
+
+
+        order.quantity = quantity;
+
+
+        order.orderPrice = quantity * price;
+
+        Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+        startActivity(orderIntent);
+
     }
-    }
+}
